@@ -13,7 +13,7 @@ defineModule(sim, list(
     person(c("Alex", "M."), "Chubaty", email = "achubaty@for-cast.ca", role = "ctb")
   ),
   childModules = character(0),
-  version = list(Biomass_regeneration = "1.0.0.9000"),
+  version = list(Biomass_regeneration = "1.0.1"),
   timeframe = as.POSIXlt(c(NA, NA)),
   timeunit = "year",
   citation = list("citation.bib"),
@@ -50,16 +50,16 @@ defineModule(sim, list(
                                  "This is generally intended for data-type modules, where stochasticity and time are not relevant"))
   ),
   inputObjects = bindrows(
-    expectsInput("cohortData", "data.table",
+    expectsInput("cohortData", "data.table",                                    # nolint: in_no_default
                  desc = paste("age cohort-biomass table hooked to pixel group map by
                               `pixelGroupIndex` at succession time step")),
-    expectsInput("inactivePixelIndex", "logical",
+    expectsInput("inactivePixelIndex", "logical",                               # nolint: in_no_default
                  desc = "internal use. Keeps track of which pixels are inactive"),
-    expectsInput("pixelGroupMap", "SpatRaster",
+    expectsInput("pixelGroupMap", "SpatRaster",                                 # nolint: in_no_default
                  desc = "updated community map at each succession time step"),
-    expectsInput("rasterToMatch", "SpatRaster",
+    expectsInput("rasterToMatch", "SpatRaster",                                 # nolint: in_no_default
                  desc = "a raster of the `studyArea`."),
-    expectsInput("rstCurrentBurn", "SpatRaster",
+    expectsInput("rstCurrentBurn", "SpatRaster",                                # nolint: in_no_default
                  desc = "Binary raster of fires, 1 meaning 'burned', 0 or NA is non-burned"),
     expectsInput("species", "data.table",
                  desc = paste("A table of invariant species traits with the following trait colums:",
