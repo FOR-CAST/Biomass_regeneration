@@ -1,7 +1,7 @@
 ---
 title: "LandR _Biomass_regeneration_ Manual"
 subtitle: "v.1.1.0.9001"
-date: "Last updated: 2026-11-24"
+date: "Last updated: 2026-11-25"
 output:
   bookdown::html_document2:
     toc: true
